@@ -70,6 +70,4 @@ Column Quality and Column Distribution options are enabled from View section <br
 ![image](https://user-images.githubusercontent.com/114440549/192378296-ffa0f612-de6c-4e84-afb4-51ed58b4cdc0.png)
 
 
-![image](https://user-images.githubusercontent.com/114440549/192395779-d664306f-b9da-4686-a9a6-6644da47c1a5.png)
-
 
