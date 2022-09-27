@@ -33,7 +33,7 @@ Apart from the pre-installed Microsoft Office Suite, we need to install 2 import
 
 # **Data Extraction, Transformation and Loading**
 
-**1.	Form Select queries to extract relevant data from Customer and Sales table** <br />
+## **1. Create queries to extract data from SQL database** <br />
 
 ```
 SELECT [CustomerKey]
@@ -59,7 +59,8 @@ SELECT
   FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
 ```
 
-**2.	Import in Power BI and apply transformations** <br /><br />
+## **2. Import in Power BI and apply transformations** <br />
+
 ***2.1 Data type change*** : It can be seen that the data type of “BirthDate” column in Customer table is Date\Time <br /><br />
 ![image](https://user-images.githubusercontent.com/114446174/192600842-4cc442d0-6d93-4031-96ba-719f56c42df3.png)
 
@@ -80,7 +81,7 @@ For the analysis, time component is not required. Using Transform option, the da
 ***2.4 Adding a custom column*** : A column that contains Sales Amount is needed for the analysis. Sales amount can be calculated using Unit Price, Order Quantity and applying Discounts. The same is formulized to create the custom column as shown below. Data type of SalesAmount is changed from “Any” to “Decimal” using Transform option
 ![image](https://user-images.githubusercontent.com/114446174/192602302-43cfa95e-9366-40ac-abfb-486cf1e189b4.png)<br /><br />
 
-**3. Adding Calendar Table** <br /><br />
+## **3. Adding Calendar Table** <br />
 In order to apply slicer across years, months and days a calendar table is needed. DAX provides a function called “Calendar” which needs start date and end date as input. To create the table with dynamic start and end date, following DAX code is used.
 
 ```
@@ -99,7 +100,7 @@ RETURN
 In addition, new columns are added which represent year, month, week and day. This is to provide ability to slice across multiple periods.<br />
 ![image](https://user-images.githubusercontent.com/114446174/192603189-44fed3e7-7709-4f0f-8b06-030bb156ff64.png)
 
-**4. Creating data model** <br />
+## **4. Creating data model** <br />
 To be able to use all three tables, relationships must be defined across them. Customer and Sales table are related by CustomerKey column. Sales and Calendar Table are related by Date and OrderDate columns. The final data model is as shown below.
 
 ![image](https://user-images.githubusercontent.com/114446174/192603314-abca85c4-ba71-4f87-aefe-cbdf6f845b52.png)
