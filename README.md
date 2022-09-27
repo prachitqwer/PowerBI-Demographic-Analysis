@@ -1,3 +1,5 @@
+![1](https://user-images.githubusercontent.com/114446174/192650706-701ff0ea-1147-48a7-8114-203717eb1561.jpg)
+
 # Customer Demography Analysis using Power BI
 
 ## **Business Context**
@@ -146,7 +148,6 @@ Card visual is added which displays the calculated column.<br />
 1. Based on the historical data analyzed, it is conclusive that on average the **customers are spending lesser** on the company’s portal. The average spend per customer has reduced from $3102 in 2010 to $55 in 2014, a **decrease of more than 98%** <br /><br />
 2. In addition, the demographic profile revealed that the **average customer is a 43 years old male who is married and earns around $60,000 annually**. These data points are shared with marketing team for their action.
 
-![image](https://user-images.githubusercontent.com/114446174/192605517-c6537dee-1bbd-4a38-b65e-89844950a1c8.png)
 
 
 
