@@ -1,7 +1,7 @@
 # Customer Demography Analysis using Power BI
 
 ## **Business Context**
-An e-commerce retail company suspects that there is decline in customers purchasing product on their portal. The company collects customer information as a part of sign-up process. Such historical data is available from 2010 to 2014. 
+An e-commerce retail company suspects that there is decline in customers purchasing product on their portal. The company collects customer information as a part of sign-up process. Historical data about customers and sales is available from 2010 to 2014. 
 
 ## **Problem statement**
 Senior leadership has asked the analytics team to validate the suspicion using data. In addition, the leadership wants to leverage historical data to perform demography analysis. The outcome of the demography analysis will be utilized by marketing team to perform segmentation and targeting with greater efficacy. 
@@ -59,15 +59,31 @@ SELECT
   FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
 ```
 
-**2.	Import in Power BI and apply transformations** <br />
-It can be seen that the data type of “BirthDate” column in Customer table is Date\Time <br />
-![image](https://user-images.githubusercontent.com/114440549/192377832-f3453d70-bd14-49a3-90f3-cf8a2e3d4f73.png)
+**2.	Import in Power BI and apply transformations** <br /><br />
+***2.1 Data type change*** : It can be seen that the data type of “BirthDate” column in Customer table is Date\Time <br /><br />
+![image](https://user-images.githubusercontent.com/114446174/192600842-4cc442d0-6d93-4031-96ba-719f56c42df3.png)
 
-For the analysis, time component is not required. Using Transform option, the data type is changed from “Date\time” to “Date” <br />
-![image](https://user-images.githubusercontent.com/114440549/192378161-83626ef7-e1b4-48da-a042-ac4d1e063c6d.png)
 
-Column Quality and Column Distribution options are enabled from View section <br />
-![image](https://user-images.githubusercontent.com/114440549/192378296-ffa0f612-de6c-4e84-afb4-51ed58b4cdc0.png)
+For the analysis, time component is not required. Using Transform option, the data type is changed from “Date\time” to “Date” <br /><br />
+![image](https://user-images.githubusercontent.com/114440549/192378161-83626ef7-e1b4-48da-a042-ac4d1e063c6d.png)<br /><br />
+
+
+***2.2 Turn on Column Quality and Column Distribution***  : Column Quality and Column Distribution options are enabled from View section. These options help in scanning the data for any errors or blank values <br /><br />
+![image](https://user-images.githubusercontent.com/114446174/192601747-9a143d13-108d-4d96-b11f-3e6d96f56bfb.png)<br /><br />
+
+
+***2.3 Removing null values*** : The CustomerPONumber column from Sales table has null values. Therefore, it is not going to be useful in the analysis and is deleted.<br /><br />
+![image](https://user-images.githubusercontent.com/114446174/192602023-bedec4f1-21ac-43c8-b8ab-522313e9229c.png)<br /><br />
+
+
+
+***2.4 Adding a custom column*** : A column that contains Sales Amount is needed for the analysis. Sales amount can be calculated using Unit Price, Order Quantity and applying Discounts. The same is formulized to create the custom column as shown below.
+![image](https://user-images.githubusercontent.com/114446174/192602302-43cfa95e-9366-40ac-abfb-486cf1e189b4.png)<br /><br />
+
+
+
+
+
 
 
 
