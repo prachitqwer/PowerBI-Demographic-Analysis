@@ -59,7 +59,7 @@ SELECT
   FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
 ```
 
-## **2. Import in Power BI and apply transformations** <br />
+## **2. Import data in Power BI and apply transformations** <br />
 
 ***2.1 Data type change*** : It can be seen that the data type of “BirthDate” column in Customer table is Date\Time <br /><br />
 ![image](https://user-images.githubusercontent.com/114446174/192600842-4cc442d0-6d93-4031-96ba-719f56c42df3.png)
