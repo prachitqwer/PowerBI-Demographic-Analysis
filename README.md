@@ -97,7 +97,7 @@ RETURN
     CALENDAR ( start_date, end_date)
 ```
 
-In addition, new columns are added which represent year, month, week and day. This is to provide ability to slice across multiple periods.<br />
+In addition, new columns are added which represent year, month, week and day. This is to provide ability to slice the data across multiple periods.<br />
 ![image](https://user-images.githubusercontent.com/114446174/192603189-44fed3e7-7709-4f0f-8b06-030bb156ff64.png)
 
 ## **4. Creating data model** <br />
