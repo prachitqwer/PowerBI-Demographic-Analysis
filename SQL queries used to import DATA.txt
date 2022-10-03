@@ -1,0 +1,27 @@
+SQL queries used to import data
+
+Import from Customer table
+
+SELECT [CustomerKey]
+      ,[GeographyKey]
+      ,[CustomerAlternateKey]
+      ,[FirstName]
+      ,[MiddleName]
+      ,[LastName]
+      ,[BirthDate]
+      ,[MaritalStatus]
+      ,[Gender]
+      ,[EmailAddress]
+      ,[YearlyIncome]
+      ,[DateFirstPurchase]
+  FROM [AdventureWorksDW2019].[dbo].[DimCustomer]
+
+Import from Sales table
+
+SELECT [CustomerKey]
+      ,[OrderQuantity]
+      ,[UnitPrice]
+      ,[DiscountAmount]
+      ,[OrderDate]
+FROM [AdventureWorksDW2019].[dbo].[FactInternetSales]
+
