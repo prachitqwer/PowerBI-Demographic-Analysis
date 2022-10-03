@@ -1,0 +1,37 @@
+DAX expressions used:
+Calendar Table
+In order to apply slice across years, months and days a calendar table is needed. DAX provides a function called “Calendar” which needs start date and end date as its input. To create the table with dynamic start and end date, following DAX code is used.
+
+Calendar_Table = 
+//Calculate Start Date
+var start_date = MIN(Sales_Table[OrderDate])
+
+//Calculate End Date
+var end_date = MAX(Sales_Table[OrderDate])
+
+RETURN
+    // Create a dynamic calendar table
+    CALENDAR ( start_date, end_date)
+
+
+DAX for calculating age of the customer:
+A new column is added to show age of the customer. The age is calculated as difference between birth date and date of first purchase. DAX function DATEDIFF is used
+Customer Age At the Time of First Purchase = 
+DATEDIFF( RELATED(Customer_Table[BirthDate]), RELATED(Customer_Table[DateFirstPurchase]), YEAR)
+
+
+DAX for calculating Gender Ratio
+A new measure in Sales table is used to calculate gender ratio. It calculates ratio of males to entire data set as shown below.
+Gender Ratio = 
+CALCULATE(COUNT(Sales_Table[CustomerKey]), Customer_Table[Gender] = "M") / COUNT(Sales_Table[CustomerKey])
+
+
+DAX for calculating Marital status
+Similar to Gender ratio, the marital status percentage is calculated and displayed.
+Married Percentage = 
+CALCULATE(COUNT(Sales_Table[CustomerKey]), Customer_Table[MaritalStatus] = "M") / COUNT(Sales_Table[CustomerKey])
+
+
+DAX for calculating Average annual income
+New column is created in Sales table which refers the average income column in customer table. 
+Temp Income = RELATED(Customer_Table[YearlyIncome
