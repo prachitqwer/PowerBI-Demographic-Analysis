@@ -3,10 +3,10 @@
 # Customer Demography Analysis using Power BI
 
 ## **Business Context**
-An e-commerce retail company suspects that there is decline in customers purchasing product on their portal. The company collects customer information as a part of sign-up process. Historical data about customers and sales is available from 2010 to 2014. 
+An e-commerce retail company suspects that there is a decline in customers purchasing product on their portal. The company collects customer information as a part of  the sign-up process. The historical data about customers and sales is available from 2010 to 2014. 
 
 ## **Problem statement**
-Senior leadership has asked the analytics team to validate the suspicion using data. In addition, the leadership wants to leverage historical data to perform demography analysis. The outcome of the demography analysis will be utilized by marketing team to perform segmentation and targeting with greater efficacy. 
+Senior leadership has asked the analytics team to validate the suspicion using data. In addition, the leadership wants to leverage historical data to perform demographic analysis. The outcome of the demographic analysis will be utilized by the marketing team to perform segmentation and targeting with greater efficacy. 
 
 ## **Data availability**
 For demography analysis, following data points are needed.
@@ -16,7 +16,7 @@ For demography analysis, following data points are needed.
 4.	Gender
 5.	Marital Status
 6.	Annual income
-Since customer information is sensitive, the data resides in company’s secured SQL server. The analytics team has been given a read access to this SQL database to perform the analysis. It is known that information collected when customer signs up is available in a dimension table named “dbo.DimCustomer”. The shopping related information is available in a fact table named “dbo.FactInternetSales”
+Since customer information is sensitive, the data resides in company’s secured SQL server. The analytics team has been given a read access to this SQL database to perform the analysis. It is known that information collected when a customer signs up is available in the dimension table named “dbo.DimCustomer”. The shopping related information is available in the fact table named “dbo.FactInternetSales”
 
 # **Pre-requisites**
 Apart from the pre-installed Microsoft Office Suite, we need to install 2 important softwares.
